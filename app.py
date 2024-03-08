@@ -17,7 +17,8 @@ app.config['SWAGGER'] = {
     'title': 'Greetings API',
     'description': 'An API that greets you and tells you its hostname',
     'uiversion': 3,
-    'version': '1.0.0'
+    'version': '1.0.0',
+    'openapi': '3.0.2'
 }
 
 swagger = Swagger(app)
