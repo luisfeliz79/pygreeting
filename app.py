@@ -61,7 +61,7 @@ def get_greeting():
       200:
         description: greeting
     """
-    greetingValue = shared_memory.greeting_phrase + " " + shared_memory.hostname
+    greetingValue = shared_memory.greeting_phrase + " " + shared_memory.hostname + "\n"
     answer = greetingValue
     return answer, 201
 
