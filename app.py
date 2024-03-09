@@ -31,8 +31,6 @@ swagger = Swagger(app)
 def post_greeting():
     """Sets the greeting phrase
     ---
-    consumes:
-    - application/json
     parameters:
       - name: body
         in: body    
