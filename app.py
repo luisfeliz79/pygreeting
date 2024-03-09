@@ -17,8 +17,7 @@ app.config['SWAGGER'] = {
     'title': 'Greetings API',
     'description': 'An API that greets you and tells you its hostname',
     'uiversion': 3,
-    'version': '1.0.0',
-    'openapi': '3.0.2'
+    'version': '1.0.0'
 }
 
 swagger = Swagger(app)
@@ -32,12 +31,16 @@ swagger = Swagger(app)
 def post_greeting():
     """Sets the greeting phrase
     ---
+    consumes:
+    - application/json
     parameters:
-      - name: Content
-        in: body
-        type: OrderedMap         
-        required: true
-        example: { "phrase":"Hello from" }
+      - name: body
+        in: body    
+        schema:
+          properties:
+            phrase:
+              type: string
+              description: A phrase that I will greet you with
     responses:
       201:
         description: phrase
